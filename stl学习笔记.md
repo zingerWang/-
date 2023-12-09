@@ -1,5 +1,5 @@
 # Traits编程技法
-### traits编程技法和模板元编程的关系
+## traits编程技法和模板元编程的关系
 * Traits编程技法和模板元编程都是C++中非常高级的编程技术，它们都涉及到模板和编译时编程，但是它们的目的和应用方式有所不同。
 
 * 模板元编程（Template Metaprogramming）是一种在编译时进行计算的方法，它使用模板来生成代码或者控制代码的生成。模板元编程的主要目的是在编译时进行计算，以生成或优化运行时代码。模板元编程的例子包括模板特殊化、模板继承、元函数等。
@@ -119,6 +119,7 @@ using other_allocator_type = typename allocator_type::template rebind<int>::othe
 ### Placement new:
 这种 new 允许在已经分配的内存上构造对象。
 例如：MyClass* obj = new (preAllocatedMemory) MyClass();
+* 不讨论重写的问题，就是在指定的空间构造对象
 ### operator new:
 这是一个函数或一组重载函数，负责分配内存，但不调用构造函数。
 它可以被重载以提供定制的内存分配行为。
