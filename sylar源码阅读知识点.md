@@ -106,3 +106,21 @@ int main() {
     return 0;  
 }
 ```
+# `<cstddef>`
+ptrdiff_t是一个有符号整数类型，通常用于表示两个指针之间的差值。它是C和C++标准库中的一种类型，定义在头文件<cstddef>中。ptrdiff_t类型的具体大小取决于实现和平台，但通常是足够大的，以便能够存储任何两个指针的差值。这在进行指针运算和内存管理时非常有用。
+```cpp
+#include <iostream>  
+#include <cstddef>  
+
+int main() {  
+    int arr[5] = {1, 2, 3, 4, 5};  
+    int* ptr1 = &arr[0];  
+    int* ptr2 = &arr[4];  
+      
+    ptrdiff_t diff = ptr2 - ptr1;  
+    std::cout << "Difference between pointers: " << diff << std::endl;  
+      
+    return 0;  
+}
+```
+在这个示例中，我们定义了一个包含5个整数的数组，并使用两个指针ptr1和ptr2分别指向数组的第一个元素和最后一个元素。我们使用ptrdiff_t类型的变量diff来存储这两个指针之间的差值，并将结果输出到控制台。由于ptr2指向数组的最后一个元素，而ptr1指向第一个元素，因此它们的差值是4（因为数组包含5个元素，所以范围是0到4）。
