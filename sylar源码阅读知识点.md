@@ -106,7 +106,7 @@ int main() {
     return 0;  
 }
 ```
-# `<cstddef>`
+## `<cstddef>`
 ptrdiff_t是一个有符号整数类型，通常用于表示两个指针之间的差值。它是C和C++标准库中的一种类型，定义在头文件<cstddef>中。ptrdiff_t类型的具体大小取决于实现和平台，但通常是足够大的，以便能够存储任何两个指针的差值。这在进行指针运算和内存管理时非常有用。
 ```cpp
 #include <iostream>  
